@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use("/", index);
-app.use("/api/vi/", todos);
+app.use("/api/v1/", todos);
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
