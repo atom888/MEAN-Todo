@@ -16,7 +16,8 @@ router.get("/todos", function(req, res, next) {
 
 // Get Single Todo
 router.get("/todo/:id", function(req, res, next) {
-  db.todos.findOne({_id: mongojs.ObjectId(req.params.id)},function(err, todo) {
+  db.todos.findOne({
+    _id: mongojs.ObjectId(req.params.id)},function(err, todo) {
     if(err) {
       res.send(err);
     } else {
@@ -34,7 +35,7 @@ router.post("/todo", function(req, res, next){
         "error": "Invalid Data"
       });
   } else {
-    db.save(todo, function(err, result){
+    db.todos.save(todo, function(err, result){
       if (err) {
         res.send(err);
       } else {
@@ -64,7 +65,7 @@ router.put("/todo/:id", function(req, res, next){
     });
   } else {
     db.todos.update({
-      _id: monojs.ObjectId(req.params.id)
+      _id: mongojs.ObjectId(req.params.id)
     }, updObj, {}, function(err, result) {
         if (err) {
           res.send(err);
@@ -79,7 +80,7 @@ router.put("/todo/:id", function(req, res, next){
 router.delete("/todo/:id", function(req, res, next){
 
     db.todos.remove({
-      _id: monojs.ObjectId(req.params.id)
+      _id: mongojs.ObjectId(req.params.id)
     }, '', function(err, result) {
         if (err) {
           res.send(err);
