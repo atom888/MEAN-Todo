@@ -1,5 +1,6 @@
 # MEAN-Todo
-Simple todos app that runs on the MEAN stack
+
+A simple single page todo app that runs on the MEAN stack.
 
 MongoDB - https://mlab.com/
 
@@ -9,4 +10,12 @@ Angular 2 - https://angular.io/
 
 NodeJS - https://nodejs.org/en/
 
-Todo App allows user to create new todos to their own todo list. User can then edit / modify their todos and if necessary  delete them from the todo list. 
+## Technical Approach & Objective
+
+This project was a first attempt at using Angular 2.
+
+The server side is built with Node, Express, and MongoDB - allowing the users to add, edit, and delete todo items. The client side uses Bootstrap for a basic portrayal of the app. 
+
+## Final Product 
+
+![Todo Home](https://github.com/atom888/MEAN-Todo/blob/master/project_photos/Todo_Home.png)
